@@ -140,7 +140,8 @@ Function InstallWinget() {
     }
     else {
         $name = "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
-        $url = "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
+        # $url = "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
+        $url = "https://github.com/microsoft/winget-cli/releases/download/v1.10.390/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
         WgetDownloadAndInstall -name $name -url $url -dir $tmpDir
         Remove-Item $tmpDir\$name
     }
@@ -212,7 +213,6 @@ Function ManualInstallApp($notInstalledApps) {
         else {
             PrintInfo "$app"
         }
-    } }
     }
 }
 

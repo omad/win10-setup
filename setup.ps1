@@ -41,52 +41,67 @@ $msftBloats = @(
     "Microsoft.Advertising.Xaml"
 )
 $wingetApps = @(
-    "Qv2ray.Qv2ray",
+    # "Qv2ray.Qv2ray",
     # "7zip.7zip",
     # "nomacs.nomacs",
-    "Bandisoft.Bandizip -v 6.29", # the old version without ads
-    "Bandisoft.Honeyview",
+    # "Bandisoft.Bandizip -v 6.29", # the old version without ads
+    # "Bandisoft.Honeyview",
 
-    "Microsoft.VisualStudioCode",
-    "Microsoft.Edge",
+    # "Microsoft.VisualStudioCode",
+    # "Microsoft.Edge",
 
-    "Tencent.QQ",
-    "Tencent.WeChat",
-    "utools.utools",
+    # "Tencent.QQ",
+    # "Tencent.WeChat",
+    # "utools.utools",
 
-    "Git.Git",
-    "OpenJS.NodeJSLTS",
-    "Lexikos.AutoHotkey",
+    # "Git.Git",
+    # "OpenJS.NodeJSLTS",
+    # "Lexikos.AutoHotkey",
 
-    "agalwood.Motrix",
-    "Netease.CloudMusic",
+    # "agalwood.Motrix",
+    # "Netease.CloudMusic",
     "VideoLAN.VLC", # seems that the download is slow, and easy to report errors？
     # "OBSProject.OBSStudio",
     # "c0re100.qBittorrent-Enhanced-Edition",
 
-    "SyncTrayzor.SyncTrayzor",
-    "NickeManarin.ScreenToGif",
+    # "SyncTrayzor.SyncTrayzor",
+    # "NickeManarin.ScreenToGif",
 
     "Microsoft.WindowsTerminal",
     "Google.Chrome",
-    "Logitech.Options",
-    "Anaconda.Miniconda3"
+    # "Logitech.Options",
+    # "Anaconda.Miniconda3"
+    #
+    "AgileBits.1Password",
+    "Dropbox.Dropbox",
+    "Zoom.Zoom",
+    "Microsoft.Teams",
+    "Mozilla.Firefox",
+    "TheDocumentFoundation.LibreOffice",
+    "AntibodySoftware.WizTree",
+    "Kopia.KopiaUI",
+    "SumatraPDF.SumatraPDF",
+    "VideoLAN.VLC",
+    "Google.Chrome",
+    "RustDesk.RustDesk",
+    "Autodesk.AutodeskAccess",
+    "Adobe.Acrobat.Reader.64-bit"
 )
-$chocoApps = @(
-    "v2ray",
-    "traffic-monitor",
-    "nvm.portable"
-    # "aria2"
-    # "ffmpeg",
-    # "freefilesync",
-    # "setpoint",
-)
-$npmPackages = @(
-    "whistle"
-)
-$gitRepos = @(
-    "awesome-ahk"
-)
+# $chocoApps = @(
+#     "v2ray",
+#     "traffic-monitor",
+#     "nvm.portable"
+#     # "aria2"
+#     # "ffmpeg",
+#     # "freefilesync",
+#     # "setpoint",
+# )
+# $npmPackages = @(
+#     "whistle"
+# )
+# $gitRepos = @(
+#     "awesome-ahk"
+# )
 
 # add -url can download by wget
 # Do not add extra spaces to separate app name
@@ -114,40 +129,40 @@ Import-Module -Name "./setup.psm1" -ErrorAction Stop
 # system settings
 RequireAdmin
 CreateTmpDir
-ActivateWin10
+# ActivateWin10
 RenameComputerName
-setPowerSettings
+# setPowerSettings
 executeTweaks("Tweaks")
 
 # application management
 UninstallMsftBloat($msftBloats)
 
 # install by winget
-ProxyWarning
+# ProxyWarning
 InstallWinget
 InstallAppByWinget($wingetApps)
 RefreshEnv
 
 # install by choco
-ChocoProxyWarning
-InstallChoco
-InstallAppByChoco($chocoApps)
-RefreshEnv
+# ChocoProxyWarning
+# InstallChoco
+# InstallAppByChoco($chocoApps)
+# RefreshEnv
 
 # others
-ManualInstallApp($notInstalledApps)
-WaitForKey
+# ManualInstallApp($notInstalledApps)
+# WaitForKey
 
 # environment settings
-SetGitNameAndEmail
-EnableGitProxy(10809)
-EnableNpmRegistry
+# SetGitNameAndEmail
+# EnableGitProxy(10809)
+# EnableNpmRegistry
 # InstallWindowsBuildTools
 
 # others download
-InstallNpmPackage($npmPackages)
-CreateWorkspaceDir
-CloneGitRepos($gitRepos)
+# InstallNpmPackage($npmPackages)
+# CreateWorkspaceDir
+# CloneGitRepos($gitRepos)
 
 # end
 RemoveTmpCheck

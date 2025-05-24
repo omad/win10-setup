@@ -1,77 +1,90 @@
 RequireAdmin
 
 # Privacy Tweaks
-DisableTelemetry
+# DisableTelemetry
 DisableCortana
+DisableWiFiSense
+
 DisableAppSuggestions
 DisableActivityHistory
-DisableLocation
-DisableMapUpdates
-DisableFeedback
+
 DisableTailoredExperiences
 DisableAdvertisingID
-DisableErrorReporting
+
+
 DisableDiagTrack
 DisableWAPPush
+
+# DisableLocation
+# DisableMapUpdates
+# DisableFeedback
+# DisableErrorReporting
 
 # UWP Privacy
 DisableUWPBackgroundApps
 
-# Security
+
+DisableScriptHost
+
 EnableF8BootMenu
+
+
+# Security
 
 # Network
 SetCurrentNetworkPrivate
-DisableRemoteAssistance
+EnableRemoteAssistance
 EnableRemoteDesktop
 
+EnableStorageSense
+
 # Service
-DisableUpdateRestart
-DisableMaintenanceWakeUp
-DisableSharedExperiences
-DisableAutoplay
-DisableAutorun
+# DisableUpdateRestart
+# DisableMaintenanceWakeUp
+# DisableSharedExperiences
+# DisableAutoplay
+# DisableAutorun
 EnableNTFSLongPaths
 
 # UI
-DisableAccessibilityKeys
-ShowTaskManagerDetails
-HideTaskbarSearch
-HideTaskView  # 任务栏的任务视图按钮
-ShowSmallTaskbarIcons
-SetTaskbarCombineNever
+# DisableAccessibilityKeys
+# ShowTaskManagerDetails
+# HideTaskbarSearch
+# HideTaskView  # 任务栏的任务视图按钮
+# ShowSmallTaskbarIcons
+# SetTaskbarCombineNever
 HideTaskbarPeopleIcon
 DisableSearchAppInStore
-DisableNewAppPrompt
-DisableShortcutInName # 不在快捷方式最后面添加一个“- 快捷方式”的后缀
-SetAppsDarkMode
-SetSystemDarkMode
-AddENKeyboard
-DisableEnhPointerPrecision
-DisableF1HelpKey
+# DisableNewAppPrompt
+# DisableShortcutInName # 不在快捷方式最后面添加一个“- 快捷方式”的后缀
+# SetAppsDarkMode
+# SetSystemDarkMode
+# AddENKeyboard
+# DisableEnhPointerPrecision
+# DisableF1HelpKey
 
 # Explorer UI
 ShowKnownExtensions
 ShowHiddenFiles
 # EnableNavPaneExpand  # Explorer 侧边导航栏自动展开到当前文件夹
-HideSyncNotifications
-HideRecentShortcuts
-SetExplorerThisPC  # Win + E 打开“此电脑”而不是“快速访问”
-HideThisPCFromDesktop
-HideDesktopFromThisPC
-HideDocumentsFromThisPC
-HideDocumentsFromExplorer
-HideDownloadsFromThisPC
-HideDownloadsFromExplorer
-HideMusicFromThisPC
-HideMusicFromExplorer
-HidePicturesFromThisPC
-HidePicturesFromExplorer
-HideVideosFromThisPC
-HideVideosFromExplorer
-Hide3DObjectsFromThisPC
-Hide3DObjectsFromExplorer
-HideIncludeInLibraryMenu
+# HideSyncNotifications
+# HideRecentShortcuts
+# SetExplorerThisPC  # Win + E 打开“此电脑”而不是“快速访问”
+# HideThisPCFromDesktop
+# HideDesktopFromThisPC
+# HideDocumentsFromThisPC
+# HideDocumentsFromExplorer
+# HideDownloadsFromThisPC
+# HideDownloadsFromExplorer
+# HideMusicFromThisPC
+# HideMusicFromExplorer
+# HidePicturesFromThisPC
+# HidePicturesFromExplorer
+# HideVideosFromThisPC
+# HideVideosFromExplorer
+# Hide3DObjectsFromThisPC
+# Hide3DObjectsFromExplorer
+# HideIncludeInLibraryMenu
 
 # Application
 DisableOneDrive
@@ -79,13 +92,13 @@ UninstallOneDrive
 UninstallThirdPartyBloat
 DisableXboxFeatures
 DisableAdobeFlash
-DisableEdgeShortcutCreation
-DisableIEFirstRun
-DisableMediaSharing
-EnableDeveloperMode
+# DisableEdgeShortcutCreation
+# DisableIEFirstRun
+# DisableMediaSharing
+# EnableDeveloperMode
 # UninstallMediaPlayer
 UninstallXPSPrinter
 RemoveFaxPrinter
 
 # Auxiliary
-WaitForKey
+# WaitForKey
